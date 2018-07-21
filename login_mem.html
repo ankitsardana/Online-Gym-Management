@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+		<head>
+
+			<title>Join gym -- online</title>
+
+			<meta charset="UTF-8">
+			<meta name="Description" content="Online gym management system">
+			
+			<link rel="stylesheet" type="text/css" href="stylef.css" />
+			<link rel="stylesheet" type="text/css" href="slider.css" />
+			<script src="js/jquery.js"></script>
+			<script src="js/jquery.aviaSlider.min.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				$('#slideshow').aviaSlider();
+
+			});
+			</script>
+		</head>
+
+		<body>
+		
+		<header>
+		<div class="page">
+			<div class="header1"><a href="index1.html"><img src="logo111.gif" width="150" height="49" id="logo" alt="Fit-Club. Get trained professionals" /></a></div>
+			<div class="header2 center">
+				<img src="diamond.png" alt="" width="82" height="92" class="png" />
+            </div>
+            <div class="header3">
+			  <nav>
+            	<a href="index1.html">Home</a>
+            	<a href="about_us.html">About Us</a>
+            	<a href="check.txt">Tips</a>
+            	<a href="contact_us.html">Contact Us</a>
+            	<a href="check.txt">FAQ</a>
+              </nav>
+			</div>
+			</div>
+		</header>
+		
+					<?php
+					$username="";
+					$password="";
+					$con=new mysqli("localhost","root","","gym_management");
+					if($con->connect_error)
+					{
+					die("could not connect:".$con->connect_error);
+					}
+					$username=mysqli_real_escape_string($con,$_POST['username']);
+					$password=mysqli_real_escape_string($con,$_POST['password']);
+					$password=md5('$password');
+					$sql="SELECT * FROM user WHERE login_id LIKE '{$username}' AND password LIKE '{$password}'";
+					$result=$con->query($sql);
+					if(!$result->num_rows==1){
+						$message = "Invalid Username OR Password";
+						echo "<script>
+						alert('$message');
+						window.location.href='index.html';
+						</script>";
+					}	
+					else
+					{	
+						$row = $result->fetch_assoc();
+						if($row["role"]=="trainer")
+						{
+							$sql1="SELECT * FROM user NATURAL JOIN trainer WHERE login_id LIKE '{$username}' ";
+							$result1=$con->query($sql1);
+							$row1=$result1->fetch_assoc();
+										
+						}
+						else
+						{
+							$sql1="SELECT * FROM user NATURAL JOIN member WHERE login_id LIKE '{$username}' ";
+							$result1=$con->query($sql1);
+							$row1=$result1->fetch_assoc();
+						}
+					}
+					$con->close();
+					?>
+			<section id="content" class="page-internal">
+				<div class = "columns3" >
+        
+					<div  style="float:right ; width: 138px">
+						<img src="image2.jpg" style="height: 200px; width: 150px;">	
+						<p ><?php   echo  $row1["fname"] ." ". $row1["lname"] ?></p>
+					</div>
+			<div class="columns1">
+        	<ul>
+                <li><a href="#" >Update info</a></li><br>
+                <li><a href="#" >Gym Plan</a></li><br>
+                <li><a href="#" >Chat</a></li><br>
+                <li><a href="#" >Settings</a></li><br>
+                <li><a href="index.html" >Logout</a></li><br>
+            </ul>
+        </div>
+        <div class="columns2">
+		<div style="width: 65%; height: 500px;float:right;color: black ;line-height: 35px;">  <h2 style="text-align-last: center;"><?php if($row["role"]=="trainer"){echo "TRAINER";}else{echo "MEMBER";} ?></h2>
+			<ul>
+        		<b>User name</b> : <i><?php   echo  $row1["login_id"] ?></i><br>
+				<b>Name</b> : <i><?php   echo  $row1["fname"] ." ". $row1["lname"] ?></i><br>
+				<b>Email Address</b> : <i><?php   echo  $row1["email"] ?></i><br>
+				<b>Address</b> : <i><?php   echo $row1["address"] ?></i><br>
+				<b>D.O.B </b>: <i><?php   echo $row1["date_of_birth"] ?></i><br>
+				<b>Height</b> : <i><?php   echo $row1["height"] ?></i> <br>
+				<b>Weight</b>: <i><?php   echo $row1["weight"] ?></i><br>
+			</ul>	
+
+	    </div>
+	    </div>
+		</section>
+
+
+
+		<footer id="bottom">
+			<div class = footer-links>
+			<div id = facebook>
+       	    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fbakchodiness%2F&width=300&layout=standard&action=like&size=small&show_faces=true&share=false&height=80&appId" width="300" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+       	    </div>
+		</footer>
+	</body>
+</html>

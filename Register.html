@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>register_member</title>
+<link type="text/css" rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+	<header class = "class1">
+            <span style="color: white"><h1>FITNESS CLUB</h1></span>
+  </header>
+
+	<nav class="nav1">
+			<a href="check.txt" >HOME</a> 
+			<a href="check.txt" >ABOUT US</a> 
+			<a href="check.txt" >TIPS</a> 
+			<a href="check.txt" >CONTACT US</a> 
+			<a href="check.txt" >F.A.Q.</a> 
+
+	</nav>
+
+	<div>
+			<div class = "div1" >
+				<div  style="float:right ; width: 123px">
+          <img src="image1.png">  
+           <a href="check.txt" ><input style="float: right; padding-right: 8%; " type="submit" value="UPLOAD PHOTO"></a>
+        </div>
+				
+				<h2 style="text-align: center;">Register as gym Member</h2>
+				<div  style="float: left; padding-left:2%">
+          <form action="/action_page.php"><br><br>  
+          
+        				
+  					Member Name:<br>
+  					<input type="text" name="firstname" value="First"  pattern="[A-Z]+"  title = "enter in Capital letters" required > 
+  					<input type="text" name="middlename" value="Middle" pattern="[A-Z]+" title = "enter in Capital letters"  > 
+  					<input type="text" name="lastname" value="Last" pattern="[A-Z]+"  title = "enter in Capital letters" > 
+  					<br><br>
+  					Email Address: <input type="text" name="Email" size = "40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="must be of form character@character.domain" required >
+  					<br><br>
+  					User name: <input type="text" name="user name" size = "40" pattern=".{6,10}" required >
+  					<br><br>
+  					Password: <input type="password" name="password" size = "40" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> 
+  					<br><br>
+  					Address: <input type="text" name="Address" size = "80" required >
+  					<br><br>
+  					Contact number: <input type="text" name="ContactNo" size = "12" pattern="[0-9]*" required >
+  					<br><br>
+  					Date of birth:
+  					<input type="date" min="01-01-1917" max="20-09-2017" required >
+  					
+  					<br><br>
+  					Height: <input type="text" name="Address" size = "10" pattern="[0-9]*\.?[0-9]*"  required  > cm  
+            <br><br>
+   
+  					Weight: <input type="text" name="Address" size = "5"pattern="\d*\.?\d*" required > Kg
+  					<br><br>
+  					Recommanded By: <input type="text" name="Address" size = "50">
+  					<br><br>
+  					Please indicate any pre-existing medical conditions :<br>
+  					<input type="text" name="condition" size = "40">
+  					<br><br>
+  					<input type="submit" value="Submit">
+
+  					
+				</form> 
+
+
+			</div>
+	</div>
+</div>
+</body>
+</html>
