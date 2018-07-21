@@ -1,0 +1,50 @@
+
+.aviaslider{ 
+	height:666px; 	/*this changes the height of the image slider*/
+	width:100%;
+	overflow: hidden;
+	position: relative;
+	margin:0px; padding:0px;
+	background: #fff url(../images/slideshow/preload.gif) center center no-repeat;}
+
+.aviaslider li, .aviaslider .featured{
+	display: block;
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 10;}
+
+.js_active .aviaslider li, .js_active .aviaslider .featured{
+	display:none;}
+
+.aviaslider img, .aviaslider a img, .aviaslider a{
+	width:100%;
+border:none;
+text-decoration: none;
+}
+
+.slidecontrolls, .slidecontrolls a{
+display:none;
+}
+
+.slidecontrolls a{
+height:400px;
+width:300px;
+display:block;
+cursor: pointer;
+background: transparent url(../images/layout/controlls.gif) center bottom no-repeat;
+float:left;
+outline: none;
+}
+
+
+.slidecontrolls a:hover, .slidecontrolls .active_item{
+	background: transparent url(../images/layout/controlls.gif) center top no-repeat; display:none;}
+
+.feature_excerpt{
+	display:none;}
+
+.feature_excerpt strong{
+	display:none;}
