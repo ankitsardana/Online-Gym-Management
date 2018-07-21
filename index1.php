@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Join gym -- online</title>
+			<meta name="Description" content="Online gym management system">
+			<link rel="stylesheet" type="text/css" href="stylef.css" />
+			<link rel="stylesheet" type="text/css" href="slider.css" />
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+			<script>window.jQuery || document.write('<script src="js/jquery.js">\x3C/script>')</script>
+			<script src="js/jquery.aviaSlider.min.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				$('#slideshow').aviaSlider();
+
+			});
+			</script>
+		</head>
+
+		<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+		<header>
+		<div class="page">
+			<div class="header1"><a href="/"><img src="logo111.gif" width="150" height="49" id="logo" alt="Fit-Club. Get trained professionals" /></a></div>
+			<div class="header2 center">
+				<img src="diamond.png" alt="" width="82" height="92" class="png" />
+            </div>
+            <div class="header3">
+			  <nav>
+            	<a href="index1.html">Home</a>
+            	<a href="about_us.html">About Us</a>
+            	<a href="check.txt">Tips</a>
+            	<a href="contact_us.html">Contact Us</a>
+            	<a href="check.txt">FAQ</a>
+              </nav>
+			</div>
+			</div>
+		</header>
+
+		<section id="attractor">
+		<div id="slideshow">
+			<ul class="aviaslider">
+				<li><a href="about_us.html"><img src="slider101.jpeg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				<li><a href="about_us.html"><img src="slider102.jpeg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				<li><a href="about_us.html"><img src="slider103.jpeg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				
+			</ul>
+    	</div>
+    	</section>
+
+    	<section id="content">
+		<div class="home-link-buttons page">
+	    	<div class="columns1"></div>
+	    	<div class="columns1">&nbsp;</div>
+	    	<div class="columns1"><a href="loginPage.html" id="buy-circle-100" class="png">Login Here</a></div>
+		</div>
+
+		<div id="overview" class="page">
+	    	<div class="columns2">
+				<h1 id="welcome-text">Welcome to FitClub </h1>
+
+				<h2 id="standfirst">Push your fitness further with our mix of facilities...<br /> <span class="byline"><q>Excellence is an art won by training and habituation. We do not act rightly because we have virtue or excellence, but we rather have those because we have acted rightly. We are what we repeatedly do. Excellence, then, is not an act but a habit.</q></span></h2>
+			</div>
+    		
+    		<div class="columns1">
+    	    	<h2 class="list-heading">Notifications:</h2>
+				<ul class="feature-list">
+                	<li>New offers available</li>
+                    <li>Weight lifting competitions</li> 
+                    <li>Aerobic classes</li>
+                    <li>New branch opening in Noida</li>
+                </ul>
+                <p class="list-description">Follow us on Facebook for tips, inspiration and the latest happenings in our clubs.<br /><a href="about_us.html">Find out more about the gym here</a></p>
+			</div>
+		</div><!-- #overview -->
+		</section>
+	
+
+		<footer id="bottom">
+			<div class = footer-links>
+			<div id = facebook>
+       	    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fbakchodiness%2F&width=300&layout=standard&action=like&size=small&show_faces=true&share=false&height=80&appId" width="300" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+       	    </div>
+		</footer>
+	
+		
+    <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-26866865-1']);
+		  _gaq.push(['_setDomainName', 'htmlandcssbook.com']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+	</script>
+
+    </header>
+        </body>
+	</html>
